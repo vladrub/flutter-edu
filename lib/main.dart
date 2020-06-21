@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,35 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            SizedBox(
-              width: 200.0,
-              height: 100.0,
-              child: Shimmer.fromColors(
-                baseColor: Colors.red,
-                highlightColor: Colors.yellow,
-                child: Text(
-                  'Shimmer',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: 300,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.fitWidth,
-                      image: NetworkImage('https://picsum.photos/200/300'))),
+            SvgPicture.asset(
+              'assets/images/flutter.svg',
+              semanticsLabel: 'Flutter Logo',
+              width: 200,
+              height: 200,
             ),
           ],
         ),

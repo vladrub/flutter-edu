@@ -1,5 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
+
+// Package imports:
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_options.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
@@ -55,6 +59,23 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 200,
               height: 200,
             ),
+            CarouselSlider(
+              options: CarouselOptions(height: 400.0),
+              items: [1, 2, 3, 4, 5].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: EdgeInsets.symmetric(horizontal: 5.0),
+                        decoration: BoxDecoration(color: Colors.amber),
+                        child: Text(
+                          'text $i',
+                          style: TextStyle(fontSize: 16.0),
+                        ));
+                  },
+                );
+              }).toList(),
+            )
           ],
         ),
       ),

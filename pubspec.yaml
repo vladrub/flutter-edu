@@ -26,6 +26,8 @@ dependencies:
   shimmer:
     git: https://github.com/hnvn/flutter_shimmer
   flutter_svg: ^0.17.0
+  carousel_slider:
+    git: https://github.com/serenader2014/flutter_carousel_slider
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -35,6 +37,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  import_sorter: ^3.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

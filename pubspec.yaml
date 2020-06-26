@@ -23,8 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shimmer:
-    git: https://github.com/hnvn/flutter_shimmer
   flutter_svg: ^0.17.0
   carousel_slider:
     git: https://github.com/serenader2014/flutter_carousel_slider
@@ -53,7 +51,6 @@ flutter:
   assets:
     - assets/
     - assets/images/
-    - assets/fonts/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
